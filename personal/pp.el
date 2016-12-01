@@ -6,8 +6,11 @@
 
 ;;; yasnippet
 (prelude-require-package 'yasnippet)
-(require 'yasnippet)
 (yas-global-mode 1)
+
+;;; auto highlight
+(prelude-require-package 'auto-highlight-symbol)
+(add-hook 'prog-mode-hook 'auto-highlight-symbol-mode)
 
 (provide 'pp)
 ;;; pp.el ends here
