@@ -1,8 +1,5 @@
 ;;; remove scroll bar
-(scroll-bar-mode -1)
-
-;;; search tool: ag
-(prelude-require-package 'ag)
+(scroll-bar-mode nil)
 
 ;;; yasnippet
 (prelude-require-package 'yasnippet)
