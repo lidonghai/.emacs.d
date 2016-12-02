@@ -1,4 +1,3 @@
 (setq package-archives 
-       '(("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
-	 ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
-	 ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
+       '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
+         ("melpa" . "http://elpa.emacs-china.org/melpa/"))）
