@@ -11,12 +11,11 @@
 
 ;;; yasnippet
 (prelude-require-package 'yasnippet)
-(yas-global-mode 1)
+(add-hook 'prog-mode-hook (lambda () (yas-global-mode 1)))
 
 ;;; auto highlight
 (prelude-require-package 'auto-highlight-symbol)
-(add-hook 'prog-mode-hook 'auto-highlight-symbol-mode)
-
+(add-hook 'prog-mode-hook (lambda () (auto-highlight-symbol-mode 1)))
 
 ;;; helm-gtags
 (prelude-require-package 'helm-gtags)
@@ -26,6 +25,7 @@
       helm-gtags-pulse-at-cursor t
       helm-gtags-prefix-key "\C-cg"
       helm-gtags-suggested-key-mapping t)
+(add-hook 'prog-mode-hook (lambda () (helm-gtags-mode 1)))
 
 
 (provide 'pp)
