@@ -27,6 +27,9 @@
       helm-gtags-suggested-key-mapping t)
 (add-hook 'prog-mode-hook (lambda () (helm-gtags-mode 1)))
 
+;;; remove fringe && scroll bar
+(set-fringe-mode 0)
+(scroll-bar-mode -1)
 
 (provide 'pp)
 ;;; pp.el ends here
