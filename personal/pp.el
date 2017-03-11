@@ -31,5 +31,11 @@
 (set-fringe-mode 0)
 (scroll-bar-mode -1)
 
+;;; enable linenum only in programming modes
+(add-hook 'prog-mode-hook 'linum-mode)
+
+;;; whenever you create useless whitespace, the whitespace is highlighted
+(add-hook 'prog-mode-hook (lambda () (interactive) (setq show-trailing-whitespace 1)))
+
 (provide 'pp)
 ;;; pp.el ends here
