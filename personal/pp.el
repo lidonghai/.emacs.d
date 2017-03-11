@@ -37,5 +37,8 @@
 ;;; whenever you create useless whitespace, the whitespace is highlighted
 (add-hook 'prog-mode-hook (lambda () (interactive) (setq show-trailing-whitespace 1)))
 
+;;; ztree: beyond compare in emacs
+(prelude-require-package 'ztree)
+
 (provide 'pp)
 ;;; pp.el ends here
