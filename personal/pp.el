@@ -40,5 +40,8 @@
 ;;; ztree: beyond compare in emacs
 (prelude-require-package 'ztree)
 
+;;; hs-minor-mode that allows users to fold and hide blocks of text.
+(add-hook 'c-mode-common-hook 'hs-minor-mode)
+
 (provide 'pp)
 ;;; pp.el ends here
