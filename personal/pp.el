@@ -43,5 +43,11 @@
 ;;; hs-minor-mode that allows users to fold and hide blocks of text.
 (add-hook 'c-mode-common-hook 'hs-minor-mode)
 
+;;; open pp.el file
+(defun open-ppel-file ()
+  (interactive)
+  (find-file "~/.emacs.d/personal/pp.el"))
+(global-set-key (kbd "<f2>") 'open-ppel-file)
+
 (provide 'pp)
 ;;; pp.el ends here
