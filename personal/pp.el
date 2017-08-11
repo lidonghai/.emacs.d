@@ -1,13 +1,8 @@
 ;;; pp.el --- Emacs Prelude: personal profile.
 ;;
 ;; Copyright © 2016 leo
-;;
-;; Author: leo<li591554358@gmail.com>
 ;; Version: 1.0.0
 ;; Keywords: convenience
-
-;;; remove scroll bar
-(scroll-bar-mode nil)
 
 ;;; yasnippet
 (prelude-require-package 'yasnippet)
@@ -27,9 +22,6 @@
       helm-gtags-suggested-key-mapping t)
 (add-hook 'prog-mode-hook (lambda () (helm-gtags-mode 1)))
 
-;;; remove fringe && scroll bar
-(set-fringe-mode 0)
-(scroll-bar-mode -1)
 
 ;;; enable linenum only in programming modes
 (add-hook 'prog-mode-hook 'linum-mode)
@@ -43,11 +35,5 @@
 ;;; hs-minor-mode that allows users to fold and hide blocks of text.
 (add-hook 'c-mode-common-hook 'hs-minor-mode)
 
-;;; open pp.el file
-(defun open-ppel-file ()
-  (interactive)
-  (find-file "~/.emacs.d/personal/pp.el"))
-(global-set-key (kbd "<f2>") 'open-ppel-file)
-
-(provide 'pp)
-;;; pp.el ends here
+;;; whitespace mode-line
+(setq prelude-whitespace nil)
